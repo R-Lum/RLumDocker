@@ -11,4 +11,4 @@ RUN apt-get update \
 RUN . /etc/environment \
   && install2.r --error \
     --deps "TRUE" \
-    XML Luminescence
+    Luminescence
