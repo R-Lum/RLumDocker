@@ -8,4 +8,4 @@ RUN install2.r --error \
 	--repos "https://cran.rstudio.com/" \
     devtools
  
-RUN R -e 'devtools::install_github(c("r-lum/luminescence@dev_0.7.0", "tzerk/rlumshiny", "r-lum/rlummodel"))'
+RUN R -e 'devtools::install_github(c("r-lum/luminescence@dev_0.7.0", "tzerk/rlumshiny"))'
