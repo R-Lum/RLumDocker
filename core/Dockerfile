@@ -15,4 +15,4 @@ RUN apt-get update -qq \
 		--repos 'http://www.bioconductor.org/packages/release/bioc' \
 		--repos "https://cran.rstudio.com/" \
 		--deps "TRUE" \
-		rgl devtools ggplot2 tidyverse rmarkdown Luminescence
+		rgl devtools ggplot2 tidyverse rmarkdown
