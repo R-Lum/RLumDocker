@@ -1,12 +1,10 @@
-FROM rocker/rstudio:testing
+FROM rlum/core
 
 MAINTAINER "Christoph Burow" christoph.burow@gmx.net
 
-RUN apt-get update -qq \
-	&& apt-get -y --no-install-recommends install \
-		libxml2-dev \
-		jags \
-	&& . /etc/environment \
+RUN . /etc/environment \
 	&& install2.r --error \
+		--repos 'http://www.bioconductor.org/packages/release/bioc' \
+		--repos "https://cran.rstudio.com/" \
 		--deps "TRUE" \
-		Luminescence
+		Luminescence RLumModel RLumShiny
