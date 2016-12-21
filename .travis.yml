@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+before_install: 
+  - docker build -t rlum/core core
+  - docker build -t rlum/stable stable
+  - docker build -t rlum/dev dev
