@@ -3,11 +3,13 @@ Docker images providing RStudio Server and the R package 'Luminescence'
 
 ## Docker Containers
 
-Core [![](https://images.microbadger.com/badges/image/rlum/core.svg)](https://microbadger.com/images/rlum/core "Get your own image badge on microbadger.com")
+> [R.Luminescence repositories on Docker Hub](https://hub.docker.com/u/rlum/)
 
-Stable [![](https://images.microbadger.com/badges/image/rlum/stable.svg)](https://microbadger.com/images/rlum/stable "Get your own image badge on microbadger.com")
-
-Development [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev "Get your own image badge on microbadger.com")
+Image      | Subfolder | Status | Size | Run image
+-----------|--------|--------|------|----------
+[rlum/core](https://hub.docker.com/r/rlum/core/)  | [core](https://github.com/R-Lum/RLumDocker/tree/master/core)   | good   | [![](https://images.microbadger.com/badges/image/rlum/core.svg)](https://microbadger.com/images/rlum/core) | `docker run -d -p 8787:8787 rlum/core`
+[rlum/stable](https://hub.docker.com/r/rlum/stable/)| [stable](https://github.com/R-Lum/RLumDocker/tree/master/stable) | good   | [![](https://images.microbadger.com/badges/image/rlum/stable.svg)](https://microbadger.com/images/rlum/stable) | `docker run -d -p 8787:8787 rlum/stable`
+[rlum/dev](https://hub.docker.com/r/rlum/dev/)   | [dev](https://github.com/R-Lum/RLumDocker/tree/master/dev)    | good   | [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev) | `docker run -d -p 8787:8787 rlum/dev`
 
 ## Install docker
 
@@ -24,10 +26,10 @@ Please follow one of the following guides depending on your OS:
 First, make sure that Docker has been successfully installed and that the Docker service is running. In your preferred command-line interface (bash, CMD, powershell, ...) type in:
 
 ```
-docker run -d -p 8787:8787 tzerk/rlum:stable
+docker run -d -p 8787:8787 rlum/stable:latest
 ```
 
-This command will automatically download (only once) and run the docker image that includes RStudio with the R packages 'Luminescence', 'RLumModel' and 'RLumShiny' pre-installed. The `-d` (or `--detach`) flag tells Docker to run the container in the background. With `-p 8787:8787` we further specify the port on which RStudio Server listens. The service should start immediately. The RStudio interface is available on `http://localhost:8787`. `tzerk/rlum:stable` refers to the username (`tzerk`), repository (`rlum`) and image tag (`stable`). If you want to use the latest development version of 'Luminescence' replace `:stable` with `:latest`.
+This command will automatically download (only once) and run the docker image that includes RStudio with the R packages 'Luminescence', 'RLumModel' and 'RLumShiny' pre-installed. The `-d` (or `--detach`) flag tells Docker to run the container in the background. With `-p 8787:8787` we further specify the port on which RStudio Server listens. The service should start immediately. The RStudio interface is available on `http://localhost:8787`. `rlum/stable:latest` refers to the username (`rlum`), repository (`stable`) and image tag (`latest`). If you want to use an older version of 'Luminescence' located in the `archive` repository use e.g. `rlum/archive:0.4.4`.
 
 **Stop**
 
