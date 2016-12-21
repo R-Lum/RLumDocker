@@ -5,11 +5,11 @@ Docker images providing RStudio Server and the R package 'Luminescence'
 
 > [R.Luminescence repositories on Docker Hub](https://hub.docker.com/u/rlum/)
 
-Image      | Subfolder | Status | Size | Run image
------------|--------|--------|------|----------
-[rlum/core](https://hub.docker.com/r/rlum/core/)  | [core](https://github.com/R-Lum/RLumDocker/tree/master/core)   | good   | [![](https://images.microbadger.com/badges/image/rlum/core.svg)](https://microbadger.com/images/rlum/core) | `docker run -d -p 8787:8787 rlum/core`
-[rlum/stable](https://hub.docker.com/r/rlum/stable/)| [stable](https://github.com/R-Lum/RLumDocker/tree/master/stable) | good   | [![](https://images.microbadger.com/badges/image/rlum/stable.svg)](https://microbadger.com/images/rlum/stable) | `docker run -d -p 8787:8787 rlum/stable`
-[rlum/dev](https://hub.docker.com/r/rlum/dev/)   | [dev](https://github.com/R-Lum/RLumDocker/tree/master/dev)    | good   | [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev) | `docker run -d -p 8787:8787 rlum/dev`
+Image      | Subfolder | Status | Size | Build type | Metrics | Run image
+-----------|-----------|--------|------|------------|---------| ---------
+[rlum/core](https://hub.docker.com/r/rlum/core/)  | [core](https://github.com/R-Lum/RLumDocker/tree/master/core)   | good   | [![](https://images.microbadger.com/badges/image/rlum/core.svg)](https://microbadger.com/images/rlum/core) | [![](https://img.shields.io/docker/automated/rlum/core.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/core.svg)]() |  `docker run -d -p 8787:8787 rlum/core`
+[rlum/stable](https://hub.docker.com/r/rlum/stable/)| [stable](https://github.com/R-Lum/RLumDocker/tree/master/stable) | good   | [![](https://images.microbadger.com/badges/image/rlum/stable.svg)](https://microbadger.com/images/rlum/stable) | [![](https://img.shields.io/docker/automated/rlum/stable.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/stable.svg)]() | `docker run -d -p 8787:8787 rlum/stable`
+[rlum/dev](https://hub.docker.com/r/rlum/dev/)   | [dev](https://github.com/R-Lum/RLumDocker/tree/master/dev)    | good   | [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev) | [![](https://img.shields.io/docker/automated/rlum/dev.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/dev.svg)]() | `docker run -d -p 8787:8787 rlum/dev`
 
 ## Install docker
 
