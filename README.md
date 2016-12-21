@@ -5,6 +5,8 @@ Docker images providing RStudio Server and the R package 'Luminescence'
 
 > [R.Luminescence repositories on Docker Hub](https://hub.docker.com/u/rlum/)
 
+> [![Build Status](https://travis-ci.org/R-Lum/RLumDocker.svg?branch=master)](https://travis-ci.org/R-Lum/RLumDocker)
+
 Image      | Subfolder | Status | Size | Build type | Metrics | Run image
 -----------|-----------|--------|------|------------|---------| ---------
 [rlum/core](https://hub.docker.com/r/rlum/core/)  | [core](https://github.com/R-Lum/RLumDocker/tree/master/core)   | good   | [![](https://images.microbadger.com/badges/image/rlum/core.svg)](https://microbadger.com/images/rlum/core) | [![](https://img.shields.io/docker/automated/rlum/core.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/core.svg)]() |  `docker run -d -p 8787:8787 rlum/core`
