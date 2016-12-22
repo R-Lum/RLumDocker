@@ -3,8 +3,9 @@ FROM rocker/rstudio:testing
 MAINTAINER "Christoph Burow" christoph.burow@gmx.net
 
 RUN apt-get update -qq \
-	&& apt-get -y --no-install-recommends install \
-		libcairo2 \
+	&& apt-get -y --no-install-recommends --allow-downgrades install \
+		libcairo2=1.14.6-1.1 \
+		libcairo2-dev \
 		libxml2-dev \
 		libx11-dev \
 		libcgal-dev \
