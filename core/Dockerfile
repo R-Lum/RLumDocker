@@ -4,7 +4,7 @@ MAINTAINER "Christoph Burow" christoph.burow@gmx.net
 
 RUN apt-get update -qq \
 	&& apt-get -y --no-install-recommends install \
-		libcairo2-dev \
+		libcairo2 \
 		libxml2-dev \
 		libx11-dev \
 		libcgal-dev \
