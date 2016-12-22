@@ -14,7 +14,31 @@ Image      | Subfolder | Size | Build type | Metrics | Run image
 [rlum/dev](https://hub.docker.com/r/rlum/dev/)   | [dev](https://github.com/R-Lum/RLumDocker/tree/master/dev) | [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev) | [![](https://img.shields.io/docker/automated/rlum/dev.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/dev.svg)]() | `docker run -d -p 8787:8787 rlum/dev`
 [rlum/archive](https://hub.docker.com/r/rlum/archive/)   | [archive](https://github.com/R-Lum/RLumDocker/tree/master/archive) | [![](https://images.microbadger.com/badges/image/rlum/archive.svg)](https://microbadger.com/images/rlum/archive) | [![](https://img.shields.io/docker/automated/rlum/archive.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/archive.svg)]() | `docker run -d -p 8787:8787 rlum/archive:<version>`
 
-## Install docker
+## Image content
+
+The base image `rlum/core` builds on top of `rocker/rstudio:testing` with additional installs of:
+* Jags
+* rgl
+* devtools
+* ggplot2
+* tidyverse
+* rmarkdown
+
+`rlum/stable` contains the following packages currently available on CRAN:
+* Luminescence
+* RLumModel
+* RLumShiny
+
+`rlum/dev` installs the latest development versions of these packages via `devtools::install_github()` from the following repositories:
+* R-Lum/Luminescence@dev_x.x.x
+* R-Lum/RLumModel@dev_x.x
+* tzerk/RLumShiny@master
+
+`rlum/archive` provides static Docker images for each release version of the R package 'Luminescence'. See the table below for all available images.
+
+## Quick usage guide
+
+**Install docker**
 
 Please follow one of the following guides depending on your OS:
 
@@ -22,9 +46,8 @@ Please follow one of the following guides depending on your OS:
 * [Mac](https://docs.docker.com/docker-for-mac/)
 * [Linux](https://docs.docker.com/engine/installation/linux/)
 
-## Quick usage guide
 
-**Start**
+**Run container**
 
 First, make sure that Docker has been successfully installed and that the Docker service is running. In your preferred command-line interface (bash, CMD, powershell, ...) type in:
 
@@ -32,9 +55,9 @@ First, make sure that Docker has been successfully installed and that the Docker
 docker run -d -p 8787:8787 rlum/stable:latest
 ```
 
-This command will automatically download (only once) and run the docker image that includes RStudio with the R packages 'Luminescence', 'RLumModel' and 'RLumShiny' pre-installed. The `-d` (or `--detach`) flag tells Docker to run the container in the background. With `-p 8787:8787` we further specify the port on which RStudio Server listens. The service should start immediately. The RStudio interface is available on `http://localhost:8787`. `rlum/stable:latest` refers to the username (`rlum`), repository (`stable`) and image tag (`latest`). If you want to use an older version of 'Luminescence' located in the `archive` repository use e.g. `rlum/archive:0.4.4`.
+This command will automatically download (only once) and run the docker image that includes RStudio with the R packages 'Luminescence', 'RLumModel' and 'RLumShiny' pre-installed. The `-d` (or `--detach`) flag tells Docker to run the container in the background. With `-p 8787:8787` we further specify the port on which RStudio Server listens to. The service should start immediately. The RStudio interface is then available on `http://localhost:8787`. `rlum/stable:latest` refers to the username (`rlum`), repository (`stable`) and image tag (`latest`). If you want to use an older version of 'Luminescence' located in the `archive` repository use e.g. `rlum/archive:0.4.4`.
 
-**Stop**
+**Stop container**
 
 Copy and run the following line in the shell (this does **not** work in windows CMD!):
 
