@@ -42,6 +42,10 @@ Copy and run the following line in the shell (this does **not** work in windows 
 docker stop $(docker ps -a -q)
 ```
 
+## Dependency graph
+
+![](_misc/RLumDocker_dependency_graph.png)
+
 ## Archived version
 
 ### Version 0.1.x
