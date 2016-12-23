@@ -19,7 +19,7 @@ for (package in packages) {
     dev_branch <- "master"
 
   # install package
-  devtools::install_github(paste0("r-lum/", package, "@", dev_branch))
+  devtools::install_github(paste0("r-lum/", package, "@", dev_branch), dependencies = TRUE)
 }
 
 # clean up
