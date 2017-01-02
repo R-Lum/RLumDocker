@@ -16,8 +16,8 @@ Image      | Subfolder | Size | Build type | Metrics | Run image
 
 ## Image content
 
-The base image `rlum/core` builds on top of `rocker/rstudio:testing` with additional installs of:
-* Jags
+The base image `rlum/core` builds on top of `rocker/rstudio:latest` ([see the 'rocker'-project by D. Eddelbuettel and C. Boettiger](https://github.com/rocker-org/rocker)) with additional installs of:
+* *JAGS*
 * rgl
 * devtools
 * ggplot2
