@@ -13,6 +13,7 @@ Image      | Subfolder | Size | Build type | Metrics | Run image
 [rlum/stable](https://hub.docker.com/r/rlum/stable/)| [stable](https://github.com/R-Lum/RLumDocker/tree/master/stable) | [![](https://images.microbadger.com/badges/image/rlum/stable.svg)](https://microbadger.com/images/rlum/stable) | [![](https://img.shields.io/docker/automated/rlum/stable.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/stable.svg)]() | `docker run -d -p 8787:8787 rlum/stable`
 [rlum/dev](https://hub.docker.com/r/rlum/dev/)   | [dev](https://github.com/R-Lum/RLumDocker/tree/master/dev) | [![](https://images.microbadger.com/badges/image/rlum/dev.svg)](https://microbadger.com/images/rlum/dev) | [![](https://img.shields.io/docker/automated/rlum/dev.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/dev.svg)]() | `docker run -d -p 8787:8787 rlum/dev`
 [rlum/archive](https://hub.docker.com/r/rlum/archive/)   | [archive](https://github.com/R-Lum/RLumDocker/tree/master/archive) | [![](https://images.microbadger.com/badges/image/rlum/archive.svg)](https://microbadger.com/images/rlum/archive) | [![](https://img.shields.io/docker/automated/rlum/archive.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/archive.svg)]() | `docker run -d -p 8787:8787 rlum/archive:<version>`
+[rlum/drac](https://hub.docker.com/r/rlum/drac/)   | [drac](https://github.com/R-Lum/RLumDocker/tree/master/drac) | [![](https://images.microbadger.com/badges/image/rlum/drac.svg)](https://microbadger.com/images/rlum/drac) | [![](https://img.shields.io/docker/automated/rlum/drac.svg)]() | [![](https://img.shields.io/docker/pulls/rlum/drac.svg)]() | `docker run -d -p 80:80 rlum/drac:<version>`
 
 ## Image content
 
@@ -35,6 +36,10 @@ The base image `rlum/core` builds on top of `rocker/rstudio:latest` ([see the 'r
 * tzerk/RLumShiny@master
 
 `rlum/archive` provides static Docker images for each release version of the R package 'Luminescence'. See the table below for all available images.
+
+## Dose Rate and Age Calculator (DRAC) images
+
+This repository also includes Dockerfiles to create docker images running an [Apache server with PHP 7.0](https://hub.docker.com/_/php/) that hosts [DRAC](https://github.com/DRAC-calculator/DRAC-calculator). Pre-made images are available [here](https://hub.docker.com/r/rlum/drac/) and can be run using `docker run -d -p 80:80 rlum/drac:<version>` (replace `<version>` with any of the tags listed [here](https://hub.docker.com/r/rlum/drac/tags/)). Once the container has been started open your browser and open [http://localhost/](http://localhost).
 
 ## Quick usage guide
 
