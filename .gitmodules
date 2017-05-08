@@ -1,3 +1,7 @@
 [submodule "drac/1.1/DRAC-calculator"]
 	path = drac/1.1/DRAC-calculator
 	url = https://github.com/DRAC-calculator/DRAC-calculator.git
+[submodule "drac/1.2/DRAC-calculator"]
+	path = drac/1.2/DRAC-calculator
+	url = https://github.com/DRAC-calculator/DRAC-calculator.git
+	branch = dev
