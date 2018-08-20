@@ -23,7 +23,6 @@ RUN apt-get update -qq \
 ## Install R packages
 	&& . /etc/environment \
 	&& install2.r --error \
-		--repos 'http://www.bioconductor.org/packages/release/bioc' \
 		--repos "https://mran.microsoft.com/" \
 		--deps "TRUE" \
 		rgl shiny devtools ggplot2 tidyverse rmarkdown
