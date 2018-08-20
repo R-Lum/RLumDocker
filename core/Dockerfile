@@ -12,6 +12,9 @@ RUN apt-get update -qq \
 		libglu1-mesa-dev \
 		libmagick++-dev \
 		libhunspell-dev \
+		libgeos-dev \
+		libudunits2-dev \
+		libgdal-dev \
 ## Build JAGS-4 from source (debian:stable is still on JAGS-3.x.y)
 	&& wget https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.2.0.tar.gz -O jags.tar.gz \
 	&& tar -xf jags.tar.gz \
