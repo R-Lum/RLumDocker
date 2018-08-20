@@ -138,3 +138,12 @@ Version  | Size  | Pull image | Run image
 [![](https://images.microbadger.com/badges/version/rlum/archive:0.7.0.svg)](https://microbadger.com/images/rlum/archive:0.7.0) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.7.0.svg)](https://microbadger.com/images/rlum/archive:0.7.0) | `docker pull rlum/archive:0.7.0` | `docker run -d -p 8787:8787 rlum/archive:0.7.0`
 [![](https://images.microbadger.com/badges/version/rlum/archive:0.7.3.svg)](https://microbadger.com/images/rlum/archive:0.7.3) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.7.3.svg)](https://microbadger.com/images/rlum/archive:0.7.3) | `docker pull rlum/archive:0.7.3` | `docker run -d -p 8787:8787 rlum/archive:0.7.3`
 [![](https://images.microbadger.com/badges/version/rlum/archive:0.7.4.svg)](https://microbadger.com/images/rlum/archive:0.7.4) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.7.4.svg)](https://microbadger.com/images/rlum/archive:0.7.4) | `docker pull rlum/archive:0.7.4` | `docker run -d -p 8787:8787 rlum/archive:0.7.4`
+[![](https://images.microbadger.com/badges/version/rlum/archive:0.7.5.svg)](https://microbadger.com/images/rlum/archive:0.7.5) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.7.5.svg)](https://microbadger.com/images/rlum/archive:0.7.5) | `docker pull rlum/archive:0.7.5` | `docker run -d -p 8787:8787 rlum/archive:0.7.5`
+
+### Version 0.8.x
+
+Version  | Size  | Pull image | Run image
+:--------|:------|:-----------|----------
+[![](https://images.microbadger.com/badges/version/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | `docker pull rlum/archive:0.8.2` | `docker run -d -p 8787:8787 rlum/archive:0.8.2`
+[![](https://images.microbadger.com/badges/version/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | `docker pull rlum/archive:0.8.3` | `docker run -d -p 8787:8787 rlum/archive:0.8.3`
+[![](https://images.microbadger.com/badges/version/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | `docker pull rlum/archive:0.8.4` | `docker run -d -p 8787:8787 rlum/archive:0.8.4`
