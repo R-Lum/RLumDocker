@@ -9,8 +9,8 @@ before_install:
     # - docker build -t rlum/dev dev
 
 script:
-  - docker run -d --name rlumcore rlum/core
-  - docker run -d --name rlumstable rlum/stable
-    # - docker run -d --name rlumdev rlum/dev
+  - docker run -d -e PASSWORD=travis --name rlumcore rlum/core
+  - docker run -d -e PASSWORD=travis --name rlumstable rlum/stable
+    # - docker run -d -e PASSWORD=travis --name rlumdev rlum/dev
   - sleep 5 && docker ps | grep rlum
   - docker rm -f $(docker ps -a -q)
