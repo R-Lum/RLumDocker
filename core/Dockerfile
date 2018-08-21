@@ -16,7 +16,7 @@ RUN apt-get update -qq \
 		libudunits2-dev \
 		libgdal-dev \
 ## Build JAGS-4 from source (debian:stable is still on JAGS-3.x.y)
-	&& wget https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.2.0.tar.gz -O jags.tar.gz \
+	&& wget https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.0.tar.gz -O jags.tar.gz \
 	&& tar -xf jags.tar.gz \
     && cd JAGS* && ./configure && make && make install \
     && cd / && rm -rf jags.tar.gz JAGS* \
@@ -24,5 +24,5 @@ RUN apt-get update -qq \
 	&& . /etc/environment \
 	&& install2.r --error \
 		--repos "https://mran.microsoft.com/" \
-		--deps "TRUE" \
+		##--deps "TRUE" \
 		rgl shiny devtools ggplot2 tidyverse rmarkdown
