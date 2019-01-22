@@ -15,14 +15,28 @@ RUN apt-get update -qq \
 		libgeos-dev \
 		libudunits2-dev \
 		libgdal-dev \
+		libgit2-dev \
 ## Build JAGS-4 from source (debian:stable is still on JAGS-3.x.y)
 	&& wget https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Source/JAGS-4.3.0.tar.gz -O jags.tar.gz \
 	&& tar -xf jags.tar.gz \
     && cd JAGS* && ./configure && make && make install \
-    && cd / && rm -rf jags.tar.gz JAGS* \
+    && cd / && rm -rf jags.tar.gz JAGS* 
 ## Install R packages
-	&& . /etc/environment \
-	&& install2.r --error \
-		--repos "https://mran.microsoft.com/" \
-		##--deps "TRUE" \
-		rgl shiny devtools ggplot2 tidyverse rmarkdown
+##	&& . /etc/environment \
+##	&& install2.r --error \
+##		--repos "https://mran.microsoft.com/" \
+##		##--deps "TRUE" \
+##		rgl shiny devtools ggplot2 tidyverse rmarkdown
+
+## Use Debian unstable to install binary r packages, mainly
+## to save time on Travis CI
+RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list
+
+RUN apt-get update -qq \
+	&& apt-get -t unstable -y --no-install-recommends install \
+		r-cran-rcpp \
+		r-cran-rmarkdown \
+		r-cran-ggplot2 \
+		r-cran-devtools \
+		r-cran-tidyverse \
+		r-cran-rgl
