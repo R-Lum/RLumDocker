@@ -1,1 +1,10 @@
 _config/
+.Rproj.user
+/.Rproj.user/*
+*.RData
+*.Rhistory
+*.Rproj
+*.Rbuildignore
+*.DS_Store
+.Rproj.user
+.Rprofile
