@@ -21,12 +21,6 @@ RUN apt-get update -qq \
 	&& tar -xf jags.tar.gz \
     && cd JAGS* && ./configure && make && make install \
     && cd / && rm -rf jags.tar.gz JAGS* 
-## Install R packages
-##	&& . /etc/environment \
-##	&& install2.r --error \
-##		--repos "https://mran.microsoft.com/" \
-##		##--deps "TRUE" \
-##		rgl shiny devtools ggplot2 tidyverse rmarkdown
 
 ## Use Debian unstable to install binary r packages, mainly
 ## to save time on Travis CI
@@ -35,8 +29,19 @@ RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/
 RUN apt-get update -qq \
 	&& apt-get -t unstable -y --no-install-recommends install \
 		r-cran-rcpp \
+		r-cran-rcppeigen \
+		r-cran-bbmle \
+		r-cran-testthat \
+		r-cran-sp \
+		r-cran-raster \
 		r-cran-rmarkdown \
 		r-cran-ggplot2 \
 		r-cran-devtools \
 		r-cran-tidyverse \
-		r-cran-rgl
+		r-cran-rgl \
+		r-cran-interp
+
+## Let R know about the package site and set default download method
+## For the latter see https://stackoverflow.com/questions/36803908/trouble-installing-packages-in-centos-internet-routines-cannot-be-loaded/36874346
+RUN export R_LIBS_SITE="/usr/lib/R/site-library/" \
+	&& echo 'options("download.file.method" = "wget")' > ~/.Rprofile 
