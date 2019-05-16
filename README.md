@@ -79,8 +79,7 @@ Please follow one of the following guides depending on your OS:
 
 First, make sure that Docker has been successfully installed and that
 the Docker service is running. In your preferred command-line interface
-(bash, CMD, powershell, …) type
-    in:
+(bash, CMD, powershell, …) type in:
 
     docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/stable:latest
 
@@ -100,8 +99,7 @@ e.g. `rlum/archive:0.4.4`.
 **Stop container**
 
 Copy and run the following line in the shell (this does **not** work in
-windows
-CMD\!):
+windows CMD\!):
 
     docker stop $(docker ps -a -q)
 
@@ -177,9 +175,11 @@ CMD\!):
 
 ### Version 0.8.x
 
-| Version                                                                                                                        | Size                                                                                                                         | Pull image                       | Run image                                                                |
-| :----------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :------------------------------- | ------------------------------------------------------------------------ |
-| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | `docker pull rlum/archive:0.8.2` | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.2` |
-| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | `docker pull rlum/archive:0.8.3` | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.3` |
-| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | `docker pull rlum/archive:0.8.4` | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.4` |
-| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.5.svg)](https://microbadger.com/images/rlum/archive:0.8.5) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.5.svg)](https://microbadger.com/images/rlum/archive:0.8.5) | `docker pull rlum/archive:0.8.5` | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.5` |
+| Version                                                                                                                        | Size                                                                                                                         | Pull image                                                               | Run image                                                                |
+| :----------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.2.svg)](https://microbadger.com/images/rlum/archive:0.8.2) | `docker pull rlum/archive:0.8.2`                                         | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.2` |
+| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.3.svg)](https://microbadger.com/images/rlum/archive:0.8.3) | `docker pull rlum/archive:0.8.3`                                         | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.3` |
+| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.4.svg)](https://microbadger.com/images/rlum/archive:0.8.4) | `docker pull rlum/archive:0.8.4`                                         | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.4` |
+| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.5.svg)](https://microbadger.com/images/rlum/archive:0.8.5) | [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.5.svg)](https://microbadger.com/images/rlum/archive:0.8.5) | `docker pull rlum/archive:0.8.5`                                         | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.5` |
+| [![](https://images.microbadger.com/badges/version/rlum/archive:0.8.6.svg)](https://microbadger.com/images/rlum/archive:0.8.6) |                                                                                                                              |                                                                          |                                                                          |
+| [![](https://images.microbadger.com/badges/image/rlum/archive:0.8.6.svg)](https://microbadger.com/images/rlum/archive:0.8.6)   | `docker pull rlum/archive:0.8.6`                                                                                             | `docker run -d -p 8787:8787 -e PASSWORD=yourpassword rlum/archive:0.8.6` |                                                                          |
